@@ -1,0 +1,200 @@
+/**** Base Styles ****/
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+body,
+select {
+    margin: 0;
+    color: #aaa;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h2,
+legend {
+    /* margin-top: 30px;*/
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #222;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    resize: none;
+}
+
+
+
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+}
+
+
+
+
+
+
+/**** Layout ****/
+
+.content {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.form-wrapper {
+    background-color: #f7f5f5;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+.contact-info .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+
+.newsletter input {
+    margin: 9px 0;
+}
+
+.form-group input,
+select,
+textarea {
+    background-color: #eeeded;
+    color: #666;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    /* margin: 10px 0 20px 0; */
+    flex: 1;
+    transition: 0.3s background-color;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: none;
+    outline: none;
+    background-color: #e0dede;
+}
+
+
+
+/**** Header ****/
+.main-header {
+    background-color: #444;
+    padding: 20px 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.intro {
+    text-align: center;
+}
+
+#zip-code {
+    width: 50%;
+}
+
+
+/**** Horizontal Rules ****/
+.thicker {
+    margin: 30px 0;
+    border-style: double;
+    box-shadow: 0 -7px 0 2px; 
+    color: #222;
+}
+
+.lighter {
+    margin: 30px 0;
+    border-style: double;
+    color: #222;
+}
+
+/****Sign up Button ****/
+button[type=submit] {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(82, 165, 137);
+    border: none;
+    border-radius: 7px;
+}
+
+/**** Footer ****/
+.main-footer {
+    text-align: center;
+    margin-bottom: 200px;
+    font-style: italic;
+}
+
+
+@media(min-width: 768px) {
+
+    .form-wrapper {
+        padding: 35px;
+    }
+    .contact-info .form-group {
+        flex-direction: row;
+    }
+
+    .form-group > label {
+        flex-basis: 150px;
+    }
+
+    .form-group {
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .form-group input,
+    select,
+    textarea  {
+        flex: 3;
+    }
+
+
+    #zip-code {
+        max-width: 150px;
+        flex: 3;
+    }
+
+
+    .content {
+        width: 70%;
+        max-width: 700px;
+    }
+}
